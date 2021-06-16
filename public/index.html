@@ -51,11 +51,11 @@
 
 
 <script>
-const socket = io('https://react-socket-curso.herokuapp.com/');
+const socket = io('http://localhost:3000');
 socket.on('mensaje-bienvenida',(payload)=>{
     console.log(payload)
 })
-
+//https://react-socket-curso.herokuapp.com/
 
 const miForm = document.querySelector('#miFormulario');
 const msglist = document.querySelector('#mismsg');
@@ -79,18 +79,6 @@ socket.on('respuesta-del-server',(data)=>{
     msgtxt.value = "";
 
 })
-
-
-
-
-/*
-setTimeout(()=>{
-    console.log("mensaje enviado al server")
-    socket.emit('mensaje-cliente',{
-        msg:'Mensaje desde el Cliente',
-        nombre: 'Leandro'
-    })
-}, 2000)*/
 
 </script>
 </body>
